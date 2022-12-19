@@ -38,11 +38,11 @@ class StatusChecker:
 
     def status_checker(self):
         try:
-            if self.time_diff < 3 and self.last_status != self.statuses[0]:
+            if self.time_diff < 60 and self.last_status != self.statuses[0]:
                 self.save_to_db(self.statuses[0], self.local_time)
-                return f'{self.statuses[0]} з {self.local_time}'
-            if self.time_diff > 3 and self.last_status != self.statuses[1]:
+                return f'{self.statuses[0]}\n {self.local_time}'
+            if self.time_diff > 60 and self.last_status != self.statuses[1]:
                 self.save_to_db(self.statuses[1], self.local_time)
-                return f'{self.statuses[1]} з {self.local_time}'
+                return f'{self.statuses[1]}\n {self.local_time}'
         except TypeError:
             return None

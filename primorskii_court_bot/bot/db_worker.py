@@ -8,7 +8,7 @@ class DBWorker:
         self.conn = psycopg2.connect(user=config.DB_USER,
                                      password=config.DB_PASS,
                                      host=config.DB_HOST,
-                                     port=config.DB_PORT,
+                                     port=config.DB_LOCAL_PORT,
                                      database=config.DB_NAME)
         self.conn.autocommit = True
         self.cursor = self.conn.cursor()
