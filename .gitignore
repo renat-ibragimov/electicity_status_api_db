@@ -127,3 +127,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+api_db/.idea/
+primorskii_court_bot/.idea/
+primorskii_court_bot/user_id_creator.py
+primorskii_court_bot/status.py
