@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  alert_status:
+    build: .
+    command: python3 alert_checker.py
+    restart: always
+    env_file:
+      - .env
+    volumes:
+      - .:/alert_status/
